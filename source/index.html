@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wenbo Zhu</title>
+    <meta name="author" content="Wenbo Zhu">
+    <meta name="description"
+        content="Wenbo Zhu is a Computer Engineering PhD student at USC working on agile chip development, accelerators, and memory-centric computing systems.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <script>
+        function getTimeBasedTheme() {
+            var now = new Date();
+            var mins = now.getHours() * 60 + now.getMinutes();
+            if (mins >= 300 && mins < 810) return 'warm';
+            if (mins >= 810 && mins < 1320) return 'blue';
+            return 'contemporary';
+        }
+        (function () {
+            var theme = localStorage.getItem('theme') || getTimeBasedTheme();
+            if (theme && theme !== 'contemporary') {
+                document.documentElement.setAttribute('data-theme', theme);
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <nav class="theme-switcher" aria-label="Theme">
+        <button class="theme-dot theme-dot--warm" data-theme="warm" aria-label="Warm theme"></button>
+        <button class="theme-dot theme-dot--blue" data-theme="blue" aria-label="Blue theme"></button>
+        <button class="theme-dot theme-dot--contemporary active" data-theme="contemporary"
+            aria-label="Contemporary theme"></button>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <div class="hero-text">
+                <h1 class="name">Wenbo Zhu</h1>
+                <p class="bio">
+                    I am a Computer Engineering PhD student at the University of Southern California. My current work
+                    focuses on agile chip development, accelerator systems, and tools that make specialized hardware
+                    easier to build, measure, and program.
+                </p>
+                <p class="bio">
+                    Going forward, I am especially interested in the compute systems behind physical intelligence:
+                    learned models that perceive, predict, plan, and act in the real world under latency and energy
+                    constraints. I see embodied AI not only as an algorithmic problem, but also as a systems
+                    problem, where model design, inference substrate, efficiency, and deployment constraints must be
+                    considered together.
+                </p>
+                <ul class="info-list">
+                    <li><span class="info-label">Role</span> PhD Student in Computer Engineering</li>
+                    <li><span class="info-label">Org</span> <a href="https://www.usc.edu">University of Southern
+                            California</a></li>
+                    <li><span class="info-label">Group</span> <a href="https://acorn-research.usc.edu">Acorn Research
+                            Group</a></li>
+                    <li><span class="info-label">Email</span> wenbozhu [at] usc [dot] edu</li>
+                </ul>
+                <nav class="social-links" aria-label="Profile links">
+                    <a href="mailto:wenbozhu@usc.edu">Email</a>
+                    <a href="https://www.linkedin.com/in/wenbo-zhu-6800a721a/">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=lcZ0ngoAAAAJ&hl=en&oi=ao">Google Scholar</a>
+                </nav>
+            </div>
+            <div class="hero-photo">
+                <img id="profileImage" class="profile-img" src="/images/profile-3.jpg" alt="Wenbo Zhu">
+            </div>
+        </header>
+
+        <section class="section" id="news">
+            <h2 class="section-title">Recent News</h2>
+            <ul class="news-list">
+                <li><a href="https://arxiv.org/abs/2603.23882">PowerFlow-DNN</a> is heading to ISLPED 2026 🎉
+                    <time>May 2026</time>
+                </li>
+                <li>Took a lab trip up to Stanford and Berkeley. Great conversations, new ideas, and hopefully the start
+                    of more collaborations. <time>April 2026</time></li>
+                <li>The Fall 2025 tapeout class wrapped up successfully, with every group submitting their GDSII
+                    designs! <time>Dec 2025</time></li>
+            </ul>
+        </section>
+
+        <section class="section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <img class="timeline-logo timeline-logo--usc-shield" src="/images/usc-shield.png" alt="USC shield">
+                    <div class="timeline-content">
+                        <h3>University of Southern California</h3>
+                        <p class="timeline-role">PhD Student in Computer Engineering</p>
+                        <p class="timeline-detail"><a href="https://acorn-research.usc.edu">Acorn Research Group</a> ·
+                            Advisor: Prof. Christopher Torng</p>
+                    </div>
+                    <span class="timeline-date">2024 - Present</span>
+                </div>
+                <div class="timeline-item">
+                    <img class="timeline-logo timeline-logo--tsinghua-seal" src="/images/tsinghua-seal.png"
+                        alt="Tsinghua University seal">
+                    <div class="timeline-content">
+                        <h3>Tsinghua University</h3>
+                        <p class="timeline-role">Bachelor of Engineering in Precision Instrument</p>
+                    </div>
+                    <span class="timeline-date">June 2024</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2 class="section-title">Research Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <img class="timeline-logo" src="/images/usc.png" alt="USC Acorn Research Group logo">
+                    <div class="timeline-content">
+                        <h3><a href="https://acorn-research.usc.edu">USC Acorn Research Group</a></h3>
+                        <p class="timeline-role">Agile chip development and accelerator research</p>
+                        <p class="timeline-detail">mflowgen flows, zero-knowledge proof generation, robotics, and
+                            Chipstitch for multi-project wafer aggregation</p>
+                    </div>
+                    <span class="timeline-date">2024 - Present</span>
+                </div>
+                <div class="timeline-item">
+                    <img class="timeline-logo" src="/images/cornell.png" alt="Cornell University logo">
+                    <div class="timeline-content">
+                        <h3>Cornell Computer Systems Laboratory</h3>
+                        <p class="timeline-role">Research Intern, School of Electrical and Computer Engineering</p>
+                        <p class="timeline-detail">Profiled GEMINI from GSI, a commercial-scale processing-in-SRAM
+                            associative processing unit; exploring DSL abstractions for APU programming</p>
+                    </div>
+                    <span class="timeline-date">2023 - Present</span>
+                </div>
+                <div class="timeline-item">
+                    <img class="timeline-logo" src="/images/gatech.png" alt="Georgia Tech logo">
+                    <div class="timeline-content">
+                        <h3>Georgia Tech Efficient and Intelligent Computing Lab</h3>
+                        <p class="timeline-role">Research Intern, School of Computer Science</p>
+                        <p class="timeline-detail">Profiled neural 3D-rendering workloads and contributed to early NeRF
+                            ASIC accelerator design</p>
+                    </div>
+                    <span class="timeline-date">2022 - 2023</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="publications">
+            <h2 class="section-title">Research &amp; Publications</h2>
+            <p class="section-intro">
+                My work sits at the boundary of hardware architecture, design automation, and workload-driven
+                accelerator design. I am especially interested in practical chip-building flows, memory-centric
+                compute, and accelerators for emerging applications.
+            </p>
+
+            <div class="pub-list">
+                <article class="pub">
+                    <h3 class="pub-title">PowerFlow-DNN: Compiler-Directed Fine-Grained Power Orchestration for
+                        End-to-End Edge AI Inference</h3>
+                    <p class="pub-authors">Paul Chen, Jeongeun Kim, <strong>Wenbo Zhu</strong>, Yuanhan Li, Shunyao
+                        Huang, Chenjie Weng, Christopher Torng</p>
+                    <p class="pub-venue">ISLPED 2026 · <a href="https://arxiv.org/abs/2603.23882">paper</a></p>
+                    <details class="pub-toggle">
+                        <summary>Abstract</summary>
+                        <p>We developed compiler-directed fine-grained power orchestration for edge AI inference,
+                            formulating deadline-constrained DNN execution as an end-to-end inter-layer scheduling
+                            problem that coordinates DVFS and power gating under practical accelerator constraints.</p>
+                    </details>
+                </article>
+
+                <article class="pub">
+                    <h3 class="pub-title">Characterizing and Optimizing Realistic Workloads on a Commercial
+                        Compute-in-SRAM Device</h3>
+                    <p class="pub-authors">Niansong Zhang, <strong>Wenbo Zhu</strong>, Courtney Golden, Dan Ilan,
+                        Hongzheng Chen, Christopher Batten, Zhiru Zhang</p>
+                    <p class="pub-venue">MICRO 2025 · <a href="https://doi.org/10.1145/3725843.3756132">paper</a> · <a
+                            href="https://www.csl.cornell.edu/~zhiruz/pdfs/apu-micro2025.pdf">pdf</a></p>
+                    <details class="pub-toggle">
+                        <summary>Abstract</summary>
+                        <p>We characterized and optimized realistic workloads on GEMINI, a commercial-scale
+                            processing-in-SRAM associative processing unit, using profiling and architectural analysis
+                            to understand its performance and energy-efficiency potential.</p>
+                    </details>
+                </article>
+
+                <article class="pub">
+                    <h3 class="pub-title">Fusion-3D: Integrated Acceleration for Instant 3D Reconstruction and Real-Time
+                        Rendering</h3>
+                    <p class="pub-authors">Shihui Li, Yuchi Zhao, Chong Li, Boyuan Guo, Jie Zhang,
+                        <strong>Wenbo Zhu</strong>, and collaborators
+                    </p>
+                    <p class="pub-venue">MICRO 2024 · Best Paper · <a
+                            href="https://doi.org/10.1109/MICRO61859.2024.00016">paper</a> · <a
+                            href="https://repository.hkust.edu.hk/ir/Record/1783.1-166633">record</a></p>
+                    <details class="pub-toggle">
+                        <summary>Abstract</summary>
+                        <p>We built integrated acceleration for neural 3D reconstruction and real-time rendering,
+                            continuing a line of work on making NeRF-style workloads practical for real-time and
+                            on-device settings.</p>
+                    </details>
+                </article>
+
+                <article class="pub">
+                    <h3 class="pub-title">Instant-3D: Instant Neural Radiance Field Training Towards On-Device AR/VR 3D
+                        Reconstruction</h3>
+                    <p class="pub-authors">Shihui Li, Chong Li, <strong>Wenbo Zhu</strong>, Bo Yu, Yuchi Zhao, and
+                        collaborators</p>
+                    <p class="pub-venue">ISCA 2023 · <a href="https://doi.org/10.1145/3579371.3589115">paper</a></p>
+                    <details class="pub-toggle">
+                        <summary>Abstract</summary>
+                        <p>We accelerated on-device neural radiance field training for AR/VR 3D reconstruction, with an
+                            emphasis on the hardware implications of emerging neural rendering workloads.</p>
+                    </details>
+                </article>
+
+                <article class="pub">
+                    <h3 class="pub-title">RT-NeRF: Real-Time On-Device Neural Radiance Fields Towards Immersive AR/VR
+                        Rendering</h3>
+                    <p class="pub-authors">Chong Li, Shihui Li, Yuchi Zhao, <strong>Wenbo Zhu</strong>, Yingyan Lin</p>
+                    <p class="pub-venue">ICCAD 2022 · <a href="https://doi.org/10.1145/3508352.3549380">paper</a> · <a
+                            href="https://licj15.github.io/rt-nerf/assets/2022ICCAD_RT_NeRF_31Oct2022.pdf">pdf</a></p>
+                    <details class="pub-toggle">
+                        <summary>Abstract</summary>
+                        <p>We investigated real-time on-device neural radiance field rendering for immersive AR/VR
+                            applications, targeting the system requirements of interactive neural 3D graphics.</p>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="teaching">
+            <h2 class="section-title">Teaching</h2>
+            <div class="pub-list">
+                <article class="pub">
+                    <h3 class="pub-title">EE 599: Complex Digital Design</h3>
+                    <p class="pub-venue">Principal TA · USC · Fall 2025</p>
+                    <p class="pub-authors">Led course infrastructure development for TSMC 28nm technology bring-up and
+                        extended the mflowgen ASIC design flow used by student projects. Organized weekly sync sessions,
+                        helped students debug design-flow issues for project tapeouts, coordinated poster sessions and
+                        presentations, and graded homework.</p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <p>Last updated: May 2026</p>
+        </footer>
+    </main>
+
+    <script>
+        var profileImages = {
+            warm: '/images/profile.jpg',
+            blue: '/images/profile-2.jpg',
+            contemporary: '/images/profile-3.jpg'
+        };
+
+        function setTheme(theme) {
+            if (theme === 'contemporary') {
+                document.documentElement.removeAttribute('data-theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', theme);
+            }
+
+            localStorage.setItem('theme', theme);
+            document.querySelectorAll('.theme-dot').forEach(function (dot) {
+                dot.classList.toggle('active', dot.dataset.theme === theme);
+            });
+
+            var profileImage = document.getElementById('profileImage');
+            if (profileImage && profileImages[theme]) {
+                profileImage.src = profileImages[theme];
+            }
+        }
+
+        var savedTheme = localStorage.getItem('theme') || getTimeBasedTheme();
+        setTheme(savedTheme);
+
+        document.querySelectorAll('.theme-dot').forEach(function (dot) {
+            dot.addEventListener('click', function () {
+                setTheme(this.dataset.theme);
+            });
+        });
+    </script>
+</body>
+
+</html>
