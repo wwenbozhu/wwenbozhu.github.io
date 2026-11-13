@@ -26,7 +26,8 @@
   --color-heading-display: #ff2a18;
 
   /* Award colors */
-  --color-award-gold: #b8860b;
+  --color-award-gold: #f3cd74;
+  --color-award-bg: #352511;
 
   /* Typography — gallery bold */
   --font-display: 'UnifrakturMaguntia', 'Big Shoulders Display', serif;
@@ -487,19 +488,24 @@ em {
 }
 
 .pub-award {
-  font-family: var(--font-italic);
-  font-style: italic;
-  font-size: var(--text-small);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--color-award-gold);
+  border-radius: 4px;
+  background: var(--color-award-bg);
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  line-height: 1.5;
   color: var(--color-award-gold);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.65rem;
 }
 
 .pub-award--nominee {
-  color: var(--color-text-secondary);
-}
-
-.award-icon {
-  margin-right: 0.2rem;
+  background: transparent;
+  border-style: dashed;
 }
 
 /* Toggle abstract */
@@ -642,6 +648,8 @@ em {
 
 /* --- Theme: Warm (Rothko) --- */
 [data-theme="warm"] {
+  --color-award-gold: #79520a;
+  --color-award-bg: #fff0cc;
   --color-bg: #f6f1eb;
   --color-text: #2c2420;
   --color-text-secondary: #5c524a;
@@ -657,6 +665,8 @@ em {
 
 /* --- Theme: Blue (Klein) — Bauhaus Editorial --- */
 [data-theme="blue"] {
+  --color-award-gold: #79520a;
+  --color-award-bg: #fff0cc;
   --color-bg: #f3f7ff;
   --color-text: #1a1e2e;
   --color-text-secondary: #4a5068;
@@ -755,8 +765,6 @@ em {
 
 [data-theme="warm"] .pub-note,
 [data-theme="blue"] .pub-note,
-[data-theme="warm"] .pub-award,
-[data-theme="blue"] .pub-award,
 [data-theme="warm"] .pub-toggle summary,
 [data-theme="blue"] .pub-toggle summary {
   font-family: var(--font-display);
@@ -805,7 +813,6 @@ em {
 
 [data-theme="blue"] em,
 [data-theme="blue"] .pub-note,
-[data-theme="blue"] .pub-award,
 [data-theme="blue"] .pub-toggle summary {
   font-family: var(--font-italic);
   font-style: italic;

@@ -163,6 +163,55 @@
 
             <div class="pub-list">
                 <article class="pub">
+                    <h3 class="pub-title">Candelta: Differential Sparsity Aware Planner-Hardware Co-Design for
+                        Accelerating World Model Planning</h3>
+                    <p class="pub-authors"><strong>Wenbo Zhu</strong>, Paul Chen, Yuanhan Li, Zishen Wan, and
+                        Christopher Torng</p>
+                    <p class="pub-venue">Submitted to MLSys 2027</p>
+                    <details class="pub-toggle">
+                        <summary>Abstract</summary>
+                        <p>JEPA-style latent world models let embodied agents plan toward new goals with model predictive
+                            control, but they are still too slow for real-life embodied control: sampling-based MPC
+                            repeats predictor inference tens of thousands of times per plan, and even on high-end GPUs
+                            one planning step can take tens of seconds. We observe substantial latent locality in this
+                            repeated-inference workload: the predictor maps close actions to close latents, and inside a
+                            quantized predictor this closeness takes a form that hardware can exploit, differential
+                            bit-level sparsity. Unlike an input stream, whose temporal similarity is given, a planner
+                            itself decides which candidates it evaluates together, so the Candelta planner can choose
+                            its own references and, with reference forest sampling, manufacture more sparsity: it couples
+                            the sampled action sequences of each group to a shared root, with competitive planning
+                            quality. We build the accelerator on the insights of the rich line of bit-level sparsity
+                            accelerators and design it and the planner tightly coupled as a single method, Candelta:
+                            the planner increases sparsity and exposes structure for hardware scheduling, and the
+                            bit-exact hardware effectively uses the sparsity that the planner creates. On three JEPA
+                            world models, Candelta is 1.28–1.80× faster than a dense accelerator and uses 38–52% less
+                            energy, and it is 1.22–1.58× faster than prior bit-sparse design and uses 16–36% less energy,
+                            with the same area. To our knowledge, the Candelta planner is the first planner that
+                            manufactures differential bit-level sparsity across its candidates and exposes its structure
+                            for hardware scheduling, and Candelta is the first algorithm-hardware co-design for
+                            JEPA-style world-model planning.</p>
+                    </details>
+                </article>
+
+                <article class="pub">
+                    <h3 class="pub-title">Chipstitch: A Scalable and Cost-Efficient Platform for Accelerated Silicon
+                        Prototyping</h3>
+                    <p class="pub-authors">Jeongeun Kim, Sabrina Yarzada, Paul Yi-Chia Chen, Yuanhan Li,
+                        <strong>Wenbo Zhu</strong>, Christopher Torng</p>
+                    <p class="pub-venue">ICCAD 2026 · <a href="https://arxiv.org/abs/2512.10089">paper</a> · <a
+                            href="https://arxiv.org/pdf/2512.10089">pdf</a></p>
+                    <details class="pub-toggle">
+                        <summary>Abstract</summary>
+                        <p>We developed a scalable silicon prototyping platform that combines intra-die tessellation,
+                            an interstitial system interconnect, and perimeter-based power shutdown to lower the cost
+                            and engineering barriers to silicon validation while preserving research-grade timing,
+                            clocking, and power measurement.</p>
+                    </details>
+                </article>
+
+                <article class="pub">
+                    <p class="pub-award pub-award--nominee"><span class="award-icon" aria-hidden="true">☆</span>
+                        Best Paper Nomination</p>
                     <h3 class="pub-title">PowerFlow-DNN: Compiler-Directed Fine-Grained Power Orchestration for
                         End-to-End Edge AI Inference</h3>
                     <p class="pub-authors">Paul Chen, Jeongeun Kim, <strong>Wenbo Zhu</strong>, Yuanhan Li, Shunyao
@@ -192,12 +241,13 @@
                 </article>
 
                 <article class="pub">
+                    <p class="pub-award"><span class="award-icon" aria-hidden="true">★</span> Best Paper Award</p>
                     <h3 class="pub-title">Fusion-3D: Integrated Acceleration for Instant 3D Reconstruction and Real-Time
                         Rendering</h3>
                     <p class="pub-authors">Shihui Li, Yuchi Zhao, Chong Li, Boyuan Guo, Jie Zhang,
                         <strong>Wenbo Zhu</strong>, and collaborators
                     </p>
-                    <p class="pub-venue">MICRO 2024 · Best Paper · <a
+                    <p class="pub-venue">MICRO 2024 · <a
                             href="https://doi.org/10.1109/MICRO61859.2024.00016">paper</a> · <a
                             href="https://repository.hkust.edu.hk/ir/Record/1783.1-166633">record</a></p>
                     <details class="pub-toggle">
@@ -251,7 +301,7 @@
         </section>
 
         <footer class="site-footer">
-            <p>Last updated: May 2026</p>
+            <p>Last updated: November 2026</p>
         </footer>
     </main>
 
